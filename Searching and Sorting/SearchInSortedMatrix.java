@@ -26,5 +26,6 @@ public class SearchInSortedMatrix {
         int val = in.nextInt();
 
         findElement(arr, val);
+        in.close();
     }
 }
