@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthStyle;
-
 public class DynamicArray {
     private int array[];
     private int count;

@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class LargestSumContiArray {
     static int maxSubArraySum(int a[], int size)
     {
