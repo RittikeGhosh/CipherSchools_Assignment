@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class ReverseStack {
     static void reverse(StackUsingLinkedList st) {
         QueueUsingLinkedList q = new QueueUsingLinkedList();

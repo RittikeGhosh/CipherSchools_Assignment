@@ -19,6 +19,6 @@ public class BalancedPar {
             System.out.println("Balanced. ");
         else 
             System.out.println("Not balanced. ");
-
+        in.close();
     }
 }

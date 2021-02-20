@@ -14,6 +14,7 @@ public class QueueUsingLinkedList {
         System.out.println();
     }
     Node head, tail;
+    int size;
     QueueUsingLinkedList() {head = tail = null;}
 
     void add(int x) {
@@ -21,11 +22,14 @@ public class QueueUsingLinkedList {
         else {
             tail.next = new Node(x);
             tail = tail.next;
+            size = 0;
         }
+        size++;
     }
 
     int pop() {
         if (head == null) return -1;
+        size--;
         int x = head.data;
         if (head.next == null)
             head = tail = null;
@@ -40,6 +44,8 @@ public class QueueUsingLinkedList {
     }
 
     boolean empty() {return head == null;}
+
+    int size() {return size;}
 
     public static void main(String[] args) {
         QueueUsingLinkedList queue = new QueueUsingLinkedList();
