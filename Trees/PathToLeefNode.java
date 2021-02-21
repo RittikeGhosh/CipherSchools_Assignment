@@ -6,7 +6,7 @@ public class PathToLeefNode {
         if (root == null) return;
         if (root.left == null && root.right == null) {
             System.out.print(root.data + " : ");
-            for (Iterator itr = dq.iterator(); itr.hasNext();)
+            for (Iterator<Integer> itr = dq.iterator(); itr.hasNext();)
                 System.out.print(itr.next() + " ");
             System.out.println(root.data);
         }

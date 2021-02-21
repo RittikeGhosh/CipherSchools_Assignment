@@ -1,12 +1,13 @@
 public class NodesAtKDistance {
+    
     static void printNodesAtKBelow(Node root, int k) {
         if (root == null || k < 0) return;
-        if (k == 0) 
+        if (k == 0) {
             System.out.print(root.data + " ");
-        else {
-            printNodesAtKBelow(root.left, k - 1);
-            printNodesAtKBelow(root.right, k - 1);
+            return;
         }
+        printNodesAtKBelow(root.left, k - 1);
+        printNodesAtKBelow(root.right, k - 1);
     }
 
     static int nodesAtKDistance(Node root, int target, int k) {
@@ -16,17 +17,19 @@ public class NodesAtKDistance {
             return 1;
         }
         int left = nodesAtKDistance(root.left, target, k);
-        if (left > -1) {
-            if (k == left) System.out.print(root.data + " ");
-            else printNodesAtKBelow(root.right, k - left - 1);
+        if (left != -1) {
+            if (left == k) System.out.print(root.data + " ");
+            printNodesAtKBelow(root.right, k - left - 1);
             return left + 1;
         }
+
         int right = nodesAtKDistance(root.right, target, k);
-        if (right > -1) {
-            if (k == right) System.out.print(root.data + " ");
-            else printNodesAtKBelow(root.left, k - right - 1);
+        if (right != -1) {
+            if (right == k) System.out.print(root.data + " ");
+            printNodesAtKBelow(root.left, k - right - 1);
             return right + 1;
         }
+
         return -1;
     }
 
@@ -44,7 +47,7 @@ public class NodesAtKDistance {
         root.right.right = new Node(70);
         root.right.left.left = new Node(80);
 
-        int target = 80, k = 3;
+        int target = 30, k = 1;
         nodesAtKDistance(root, target, k);
 
     }

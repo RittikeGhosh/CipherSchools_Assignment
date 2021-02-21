@@ -35,5 +35,6 @@ public class TreeFromInorderPostorder {
         Node root = constructTree(inorder, post, 0, n - 1);
         inorderTraverse(root);
         System.out.println();
+        in.close();
     }
 }

@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.TreeMap;
@@ -65,7 +64,7 @@ public class TreeViews {
 
         System.out.print("\nBottom View: ");
         bottomView(root, 0, mp);
-        for (Map.Entry e : mp.entrySet())
+        for (Map.Entry<Integer, Integer> e : mp.entrySet())
             System.out.print(e.getValue() + " ");
         System.out.println();
     }
